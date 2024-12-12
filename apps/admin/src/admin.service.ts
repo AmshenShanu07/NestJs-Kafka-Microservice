@@ -11,6 +11,8 @@ export class AdminService implements OnModuleInit {
   onModuleInit() {
     this.authService.subscribeToResponseOf('auth.allUsers');
     this.bookmarkService.subscribeToResponseOf('bookmark.getAll');
+    this.authService.connect();
+    this.bookmarkService.connect();
   }
 
   getAllUsers() {
